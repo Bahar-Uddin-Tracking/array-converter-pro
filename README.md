@@ -15,7 +15,11 @@
 - Clean fallback logic
 - Console logging for easy debugging
 
-## 📦 Installation
+# How to install this Template
 
-1. Import the `template.tpl` file into Google Tag Manager under Templates > Variable Templates > import.
-2. Use the custom variable in your tags or triggers.
+1. Download the template.tpl from this GitHub Repository
+2. Go to the Templates Section in your browser GTM Instance
+3. In the variable Templates Section, click on "New"
+4. Select "Import" in the three dots menu at the top right
+5. Select the downloaded template.tpl file and save the Template
+6. Close the template editor and go to the Variables section and click New, select this variable
