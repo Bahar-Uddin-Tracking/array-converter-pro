@@ -17,7 +17,7 @@
 
 # How to install this Template
 
-1. Download the Array Converter Pro.tpl from this GitHub Repository
+1. Download Array Converter Pro.tpl from this GitHub repository as a download raw file
 2. Go to the Templates Section in your browser GTM Instance
 3. In the variable Templates Section, click on "New"
 4. Select "Import" in the three dots menu at the top right
