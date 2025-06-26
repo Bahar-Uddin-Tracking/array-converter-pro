@@ -19,7 +19,7 @@
 
 1. Download Array Converter Pro.tpl from this GitHub repository as a download raw file
 2. Go to the Templates Section in your browser GTM Instance
-3. In the variable Templates Section, click on "New"
+3. In the Templates section, then variable Templates Section, click on "New"
 4. Select "Import" in the three dots menu at the top right
 5. Select the downloaded Array Converter Pro.tpl file and save the Template
 6. Close the template editor and go to the Variables section and click New, select this variable
