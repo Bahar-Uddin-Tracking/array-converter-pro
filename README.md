@@ -10,7 +10,7 @@
 
 # Array Converter Pro
 
-> A flexible GTM variable for converting ecommerce item arrays into platform-specific formats — ideal for Facebook, TikTok, GA4, Pinterest, Snapchat, and more.
+> A flexible GTM variable for converting ecommerce item arrays into platform-specific formats — ideal for Facebook, TikTok, GA4, Pinterest, Snapchat, and Google Ads Remarketing.
 
 ## 🔧 Features
 
