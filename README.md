@@ -2,7 +2,7 @@
 ![GA4](https://img.shields.io/badge/GA4-Analytics-F9AB00?style=flat&logo=google-analytics&logoColor=#E37400)
 ![Facebook](https://img.shields.io/badge/Facebook-white?style=flat&logo=facebook&logoColor=blue)
 ![Google Ads](https://img.shields.io/badge/Google-34A853?style=flat&logo=google-ads&logoColor=FBBC04)
-![Tiktok](https://img.shields.io/badge/Tiktok-34A853?style=flat&logo=tiktok&logoColor=black)
+![Tiktok](https://img.shields.io/badge/Tiktok-black?style=flat&logo=tiktok&logoColor=white)
 ![Snapchat](https://img.shields.io/badge/Snapchat-FFFC00?style=flat&logo=snapchat&logoColor=white)
 ![Pinterest](https://img.shields.io/badge/Pinterest-white?style=flat&logo=pinterest&logoColor=red)
 
