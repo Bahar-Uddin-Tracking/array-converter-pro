@@ -4,7 +4,7 @@
 ![Google Ads](https://img.shields.io/badge/Google-34A853?style=flat&logo=google-ads&logoColor=FBBC04)
 ![Tiktok](https://img.shields.io/badge/Tiktok-34A853?style=flat&logo=tiktok&logoColor=black)
 ![Snapchat](https://img.shields.io/badge/Snapchat-34A853?style=flat&logo=snapchat&logoColor=FFFC00)
-![Pinterest](https://img.shields.io/badge/Pinterest-red?style=flat&logo=pinterest&logoColor=red)
+![Pinterest](https://img.shields.io/badge/Pinterest-white?style=flat&logo=pinterest&logoColor=red)
 
 
 
