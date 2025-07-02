@@ -11,7 +11,7 @@
   - Pinterest
   - Snapchat
   - GA4
-  - Google Remarketing
+  - Google Ads Dynamic Remarketing
 - Clean fallback logic
 - Console logging for easy debugging
 
