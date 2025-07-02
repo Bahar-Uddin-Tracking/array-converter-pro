@@ -1,3 +1,9 @@
+![GTM](https://img.shields.io/badge/GTM-Tag%20Manager-4285F4?style=flat&logo=google-tag-manager&logoColor=blue)
+![GA4](https://img.shields.io/badge/GA4-Analytics-F9AB00?style=flat&logo=google-analytics&logoColor=#E37400)
+![Facebook Pixel](https://img.shields.io/badge/Facebook%20Pixel-white?style=flat&logo=facebook&logoColor=blue)
+![Google Ads](https://img.shields.io/badge/Google%20Ads-34A853?style=flat&logo=google-ads&logoColor=white)
+![Tiktok](https://img.shields.io/badge/Tiktok%20Ads-34A853?style=flat&logo=tiktok&logoColor=white)
+
 # Array Converter Pro
 
 > A flexible GTM variable for converting ecommerce item arrays into platform-specific formats — ideal for Facebook, TikTok, GA4, Pinterest, Snapchat, and more.
