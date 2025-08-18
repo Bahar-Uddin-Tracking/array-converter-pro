@@ -7,6 +7,6 @@ code_repository_url: "https://github.com/Bahar319/Array-Converter-Pro"
 author:
   name: "Bahar Uddin"
   url: "https://github.com/Bahar319"
-
-categories:
-  - ANALYTICS
+version: 
+  sha: 2525f181474b472ec8253d7078bf05bb352b9972
+  changeNotes: Initial release.
