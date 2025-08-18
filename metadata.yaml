@@ -1,9 +1,7 @@
 name: "Array Converter Pro"
 description: "A flexible GTM variable for converting ecommerce item arrays into platform-specific formats — ideal for Facebook, TikTok, GA4, Pinterest, Snapchat, and Google Ads Remarketing"
 type: "variable"
-documentation_url: "https://github.com/Bahar319/Array-Converter-Pro#readme"
-code_repository_url: "https://github.com/Bahar319/Array-Converter-Pro"
-
+documentation: "https://github.com/Bahar319/Array-Converter-Pro"
 author:
   name: "Bahar Uddin"
   url: "https://github.com/Bahar319"
