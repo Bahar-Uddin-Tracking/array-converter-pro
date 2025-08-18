@@ -5,6 +5,5 @@ documentation: "https://github.com/Bahar319/Array-Converter-Pro"
 author:
   name: "Bahar Uddin"
   url: "https://github.com/Bahar319"
-version: 
-  sha: 2525f181474b472ec8253d7078bf05bb352b9972
-  changeNotes: Initial release.
+version: "1.0.0"
+changeNotes: "Initial release"
