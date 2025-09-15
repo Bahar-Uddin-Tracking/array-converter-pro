@@ -72,7 +72,7 @@ ___TEMPLATE_PARAMETERS___
     "name": "checkbox",
     "checkboxText": "Yes",
     "simpleValueType": true,
-    "displayName": "Do you need item_id / item_name of multiple products?",
+    "displayName": "Do you want to work across multiple products?",
     "enablingConditions": [
       {
         "paramName": "checkboxdropDown",
@@ -94,6 +94,10 @@ ___TEMPLATE_PARAMETERS___
       {
         "value": "item_name",
         "displayValue": "Item Name"
+      },
+      {
+        "value": "itemlength",
+        "displayValue": "Num of Items"
       }
     ],
     "simpleValueType": true,
@@ -141,12 +145,19 @@ if (ecommerce && ecommerce.items && ecommerce.items.length > 0) {
 
   if (checkbox) {
     const values = [];
+    let itemsNumber = 0;
 
     for (let i = 0; i < ecommerce.items.length; i++) {
       const product = ecommerce.items[i];
+      
       if (radioButton && product[radioButton] !== undefined) {
         values.push(string(product[radioButton]));
       }
+    }
+
+    if (radioButton === 'itemlength') {
+      itemsNumber = number(ecommerce.items.length);
+      return itemsNumber;
     }
 
     return values;
@@ -267,3 +278,5 @@ scenarios: []
 ___NOTES___
 
 Created on 6/23/2025, 8:26:41 PM
+
+
