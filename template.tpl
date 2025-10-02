@@ -145,25 +145,24 @@ if (ecommerce && ecommerce.items && ecommerce.items.length > 0) {
 
   if (checkbox) {
     const values = [];
-    let itemsNumber = 0;
+
+    if (radioButton === 'itemlength') {
+      return number(ecommerce.items.length);
+    }
 
     for (let i = 0; i < ecommerce.items.length; i++) {
       const product = ecommerce.items[i];
-      
-      if (radioButton && product[radioButton] !== undefined) {
-        values.push(string(product[radioButton]));
+
+      if (radioButton === 'item_id') {
+        values.push(string(product['item_id'] || product['id']));
+      } else if (radioButton === 'item_name') {
+        values.push(string(product['item_name'] || product['name']));
       }
     }
 
-    if (radioButton === 'itemlength') {
-      itemsNumber = number(ecommerce.items.length);
-      return itemsNumber;
-    }
-
     return values;
-  }
 
-  else if (checkboxdropDown || remarketing || dropDownMenu) {
+  } else if (checkboxdropDown || remarketing || dropDownMenu) {
     const formattedItems = [];
 
     for (let i = 0; i < ecommerce.items.length; i++) {
@@ -172,40 +171,40 @@ if (ecommerce && ecommerce.items && ecommerce.items.length > 0) {
 
       if (dropDownMenu === 'facebook') {
         formatted = {
-          id: string(product.item_id) || string(product.id),
+          id: string(product['item_id'] || product['id']),
           item_price: number(product.price),
           quantity: number(product.quantity) || 1
         };
       } else if (dropDownMenu === 'tiktok') {
         formatted = {
-          content_id: string(product.item_id) || string(product.id),
+          content_id: string(product['item_id'] || product['id']),
           content_name: product.item_name || product.name,
           price: number(product.price),
           quantity: number(product.quantity) || 1
         };
       } else if (dropDownMenu === 'pinterest') {
         formatted = {
-          product_id: string(product.item_id) || string(product.id),
+          product_id: string(product['item_id'] || product['id']),
           product_name: product.item_name || product.name,
           product_price: number(product.price),
           product_quantity: number(product.quantity) || 1
         };
       } else if (dropDownMenu === 'snapchat') {
         formatted = {
-          id: string(product.item_id) || string(product.id),
+          id: string(product['item_id'] || product['id']),
           item_price: number(product.price),
           quantity: number(product.quantity) || 1
         };
       } else if (dropDownMenu === 'ga4') {
         formatted = {
-          item_id: string(product.item_id) || string(product.id),
+          item_id: string(product['item_id'] || product['id']),
           item_name: product.item_name || product.name,
           price: number(product.price),
           quantity: number(product.quantity) || 1
         };
       } else if (remarketing) {
         formatted = {
-          id: string(product.item_id) || string(product.id),
+          id: string(product['item_id'] || product['id']),
           google_business_vertical: 'retail'
         };
       } else {
