@@ -22,7 +22,7 @@
   - Snapchat
   - GA4
   - Google Ads Dynamic Remarketing
-  - Array for item_id and item_name parameters for checkout and purchase events
+  - Array for content_ids and content_name parameters for checkout and purchase events
   - Number of items
 - Clean fallback logic
 - Console logging for easy debugging
