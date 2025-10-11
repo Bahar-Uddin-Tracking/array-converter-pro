@@ -141,17 +141,25 @@ let remarketing = data.remarketing;
 
 const ecommerce = copyFromDataLayer('ecommerce') || copyFromDataLayer('eventModel');
 
-if (ecommerce && ecommerce.items && ecommerce.items.length > 0) {
+if (ecommerce) {
+  const items =
+    (ecommerce.items && ecommerce.items.length > 0 && ecommerce.items) ||
+    (ecommerce.detail && ecommerce.detail.products && ecommerce.detail.products.length > 0 && ecommerce.detail.products) ||
+    [];
+
+  if (items.length === 0) {
+    return [];
+  }
 
   if (checkbox) {
     const values = [];
 
     if (radioButton === 'itemlength') {
-      return number(ecommerce.items.length);
+      return number(items.length);
     }
 
-    for (let i = 0; i < ecommerce.items.length; i++) {
-      const product = ecommerce.items[i];
+    for (let i = 0; i < items.length; i++) {
+      const product = items[i];
 
       if (radioButton === 'item_id') {
         values.push(string(product['item_id'] || product['id']));
@@ -165,50 +173,58 @@ if (ecommerce && ecommerce.items && ecommerce.items.length > 0) {
   } else if (checkboxdropDown || remarketing || dropDownMenu) {
     const formattedItems = [];
 
-    for (let i = 0; i < ecommerce.items.length; i++) {
-      const product = ecommerce.items[i];
+    for (let i = 0; i < items.length; i++) {
+      const product = items[i];
       let formatted = {};
 
-      if (dropDownMenu === 'facebook') {
-        formatted = {
-          id: string(product['item_id'] || product['id']),
-          item_price: number(product.price),
-          quantity: number(product.quantity) || 1
-        };
-      } else if (dropDownMenu === 'tiktok') {
-        formatted = {
-          content_id: string(product['item_id'] || product['id']),
-          content_name: product.item_name || product.name,
-          price: number(product.price),
-          quantity: number(product.quantity) || 1
-        };
-      } else if (dropDownMenu === 'pinterest') {
-        formatted = {
-          product_id: string(product['item_id'] || product['id']),
-          product_name: product.item_name || product.name,
-          product_price: number(product.price),
-          product_quantity: number(product.quantity) || 1
-        };
-      } else if (dropDownMenu === 'snapchat') {
-        formatted = {
-          id: string(product['item_id'] || product['id']),
-          item_price: number(product.price),
-          quantity: number(product.quantity) || 1
-        };
-      } else if (dropDownMenu === 'ga4') {
-        formatted = {
-          item_id: string(product['item_id'] || product['id']),
-          item_name: product.item_name || product.name,
-          price: number(product.price),
-          quantity: number(product.quantity) || 1
-        };
-      } else if (remarketing) {
-        formatted = {
-          id: string(product['item_id'] || product['id']),
-          google_business_vertical: 'retail'
-        };
-      } else {
-        formatted = product;
+      switch (dropDownMenu) {
+        case 'facebook':
+          formatted = {
+            id: string(product['item_id'] || product['id']),
+            item_price: number(product.price),
+            quantity: number(product.quantity) || 1
+          };
+          break;
+        case 'tiktok':
+          formatted = {
+            content_id: string(product['item_id'] || product['id']),
+            content_name: product.item_name || product.name,
+            price: number(product.price),
+            quantity: number(product.quantity) || 1
+          };
+          break;
+        case 'pinterest':
+          formatted = {
+            product_id: string(product['item_id'] || product['id']),
+            product_name: product.item_name || product.name,
+            product_price: number(product.price),
+            product_quantity: number(product.quantity) || 1
+          };
+          break;
+        case 'snapchat':
+          formatted = {
+            id: string(product['item_id'] || product['id']),
+            item_price: number(product.price),
+            quantity: number(product.quantity) || 1
+          };
+          break;
+        case 'ga4':
+          formatted = {
+            item_id: string(product['item_id'] || product['id']),
+            item_name: product.item_name || product.name,
+            price: number(product.price),
+            quantity: number(product.quantity) || 1
+          };
+          break;
+        default:
+          if (remarketing) {
+            formatted = {
+              id: string(product['item_id'] || product['id']),
+              google_business_vertical: 'retail'
+            };
+          } else {
+            formatted = product;
+          }
       }
 
       formattedItems.push(formatted);
